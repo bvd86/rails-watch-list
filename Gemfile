@@ -21,6 +21,7 @@ gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 6.1.1 "
 gem "simple_form", github: "heartcombo/simple_form"
 gem "faker"
+gem 'dotenv-rails', groups: [:development, :test]
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -49,6 +50,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'rspec-rails', group: [ :test ]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]

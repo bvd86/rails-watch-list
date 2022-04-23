@@ -1,4 +1,10 @@
 <h3 class="list-name"><%= @list.name %></h3>
+  <div class="return">
+     <%=  link_to "Delete List",
+          @list_path,
+          method: :delete,
+          data: { confirm: "Are you sure? This will delete the list and all the bookmarks." } %>
+  </div>
 <hr>
 <p class="new-movie"><%= link_to "Add a movie", new_list_bookmark_path(@list) %></p>
 <hr>

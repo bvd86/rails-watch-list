@@ -1,0 +1,130 @@
+.list-name {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 4rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.return {
+  text-align: center;
+}
+
+.new-movie{
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.new-movie:hover{
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+.card {
+  border-radius: 16px;
+  margin: 0 auto;
+  width: 300px;
+  max-width: 30%;
+  min-height: 400px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
+  background-size: cover;
+}
+
+.card-info {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+  transform: translateY(100%)
+    translateY(-88px)
+    translateZ(0);
+  transition: transform 0.5s ease-out;
+}
+
+.card-info:before {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
+  filter: blur(10px);
+  background-size: cover;
+  opacity: 0.25;
+  transform: translateY(-100%)
+    translateY(88px)
+    translateZ(0);
+  transition: transform 0.5s ease-out;
+}
+
+.card:hover .card-info,
+.card:hover .card-info:before {
+  transform: translateY(0) translateZ(0);
+}
+
+.card-title {
+  text-align: center;
+  margin: 0;
+  padding: 24px 10px 50px;
+  font-size: 30px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.card-description {
+  margin: 0;
+  padding: 0 24px 24px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.rating-delete {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media (min-width:800px) {
+  h1 {
+    font-size: 4.236em;
+    font-weight: 300
+  }
+}
+
+@media (min-width:800px) {
+  p {
+    font-size: 1.3em
+  }
+}

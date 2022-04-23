@@ -1,4 +1,26 @@
-<H1>Test List ID</H1>
-<%= @list.name %>
+<h3 class="list-name"><%= @list.name %></h3>
 <hr>
-<%= link_to "Return", lists_path %>
+<p class="new-movie"><%= link_to "Add a movie", new_list_bookmark_path(@list) %></p>
+<hr>
+<div class="card-container">
+  <% @list.bookmarks.each do |bookmark| %>
+    <div class="card">
+      <div class="card-info">
+          <p class="card-title"><%= bookmark.movie.title %></p>
+          <div class="card-description">
+            <p>Description: <br><br> <%= bookmark.movie.overview %></p>
+            <p>Comment: <br><br><%= bookmark.comment %></p>
+            <div class="rating-delete">
+              <p>Rating: <%= bookmark.movie.rating.round(1) %></p>
+              <%= link_to "Delete",
+                bookmark_path(bookmark),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+            </div>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<hr>
+<p class="return"><%= link_to "Return", lists_path %></p>

@@ -73,6 +73,7 @@ ul li {
   padding-left: 0;
 }
 
+
 ul:hover li {
   color: #0002;
 }
@@ -99,7 +100,8 @@ ul li:before {
   text-transform: uppercase;
   letter-spacing: 500px;
   transition: letter-spacing 0.5s,left 0.5s;
-
+  max-height: 80%;
+  max-width: 85%;
 }
 
 ul li:hover:before {
